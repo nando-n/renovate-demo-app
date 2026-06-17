@@ -12,5 +12,4 @@ target/
 .vscode/
 *.iml
 
-# Renovate (wird von Teilnehmern selbst erstellt)
-renovate.json
+renovate.log
