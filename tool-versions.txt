@@ -1,5 +1,5 @@
 # Tool versions used in this project
-node=20.11.0
+node=20.20.2
 terraform=1.5.0
 kubectl=1.28.0
 helm=3.12.0
