@@ -9,4 +9,4 @@ spec:
         - name: app
           image: nginx:1.24.0
         - name: sidecar
-          image: busybox:1.35.0
+          image: busybox:1.38.0
