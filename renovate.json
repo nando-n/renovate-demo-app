@@ -1,48 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "configMigration": true,
-  "customManagers": [
-    {
-      "customType": "regex",
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "nodejs/node",
-      "managerFilePatterns": [
-        "/^tool-versions\\.txt$/"
-      ],
-      "matchStrings": ["node=(?<currentValue>[\\d.]+)"],
-      "versioningTemplate": "node"
-    }
-  ],
-  "enabledManagers": ["kubernetes"],
   "extends": [
-    "config:recommended"
-  ],
-  "kubernetes": {
-    "managerFilePatterns": [
-      "/\\.ya?ml$/"
-    ]
-  },
-  "prConcurrentLimit": 100,
-  "prHourlyLimit": 0,
-  "packageRules": [
-    {
-      "automerge": true,
-      "groupName": "all @types",
-      "matchPackageNames": [
-        "/^@types//"
-      ]
-    },
-    {
-      "automerge": true,
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major"],
-      "prPriority": 5
-    },
-    {
-      "automerge": true,
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch"],
-      "prPriority": -1
-    }
+    "github>nando.n/renovate-config"
   ]
 }
