@@ -3,11 +3,25 @@
   "extends": [
     "config:recommended"
   ],
+  "prConcurrentLimit": 100,
+  "prHourlyLimit": 0,
   "packageRules": [
     {
+      "automerge": false,
+      "groupName": "all @types",
+      "matchPackagePatterns": ["^@types/"]
+    },
+    {
+      "automerge": false,
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major"],
+      "prPriority": 5
+    },
+    {
+      "automerge": true,
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "prPriority": -1
     }
   ]
 }

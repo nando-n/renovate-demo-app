@@ -1,0 +1,1345 @@
+⚠️ NOTE ⚠️: Renovate's logger has not yet been initialized. If you see no other output, this is a bug
+DEBUG: Detected HTTP_PROXY value in env
+DEBUG: Detected HTTPS_PROXY value in env
+ INFO: Renovate started
+       "renovateVersion": "43.227.1"
+DEBUG: Using RE2 regex engine
+DEBUG: Parsing configs
+DEBUG: No config file found on disk - skipping
+DEBUG: No additional config file found specified - skipping
+ WARN: cli config dryRun property has been changed to full
+DEBUG: Converting GITHUB_COM_TOKEN into a global host rule
+DEBUG: File config
+       "config": {}
+DEBUG: Additional file config
+       "config": {}
+DEBUG: CLI config
+       "config": {"dryRun": "full", "platform": "local"}
+DEBUG: Env config
+       "config": {
+         "hostRules": [
+           {"hostType": "github", "matchHost": "github.com", "token": "***********"}
+         ],
+         "token": "***********"
+       }
+DEBUG: Resolved global extends
+       "config": undefined
+DEBUG: Combined config
+       "config": {
+         "hostRules": [
+           {"hostType": "github", "matchHost": "github.com", "token": "***********"}
+         ],
+         "token": "***********",
+         "dryRun": "full",
+         "platform": "local"
+       }
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Enabling onboardingNoDeps while in non-autodiscover mode
+DEBUG: Found valid git version: 2.54.0
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+DEBUG: Using baseDir: /tmp/renovate
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Using containerbaseDir: /tmp/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+ INFO: Repository started (repository=local)
+       "renovateVersion": "43.227.1"
+DEBUG: Using localDir: /usr/src/app (repository=local)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=local)
+DEBUG: Resetting npmrc (repository=local)
+DEBUG: Resetting npmrc (repository=local)
+DEBUG: checkOnboarding() (repository=local)
+DEBUG: isOnboarded() (repository=local)
+DEBUG: findFile(renovate.json) (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Config file exists, fileName: renovate.json (repository=local)
+DEBUG: Repo is onboarded (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Found renovate.json config file (repository=local)
+DEBUG: Repository config (repository=local)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:recommended"],
+         "packageRules": [
+           {
+             "automerge": false,
+             "groupName": "all @types",
+             "matchPackagePatterns": ["/^@types\\///"]
+           },
+           {
+             "automerge": false,
+             "matchDepTypes": ["dependencies"],
+             "matchUpdateTypes": ["major"],
+             "prPriority": 5
+           },
+           {
+             "automerge": true,
+             "matchDepTypes": ["devDependencies"],
+             "matchUpdateTypes": ["patch"],
+             "prPriority": -1
+           }
+         ]
+       }
+DEBUG: migrateAndValidate() (repository=local)
+DEBUG: Config migration necessary (repository=local)
+       "oldConfig": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:recommended"],
+         "packageRules": [
+           {
+             "automerge": false,
+             "groupName": "all @types",
+             "matchPackagePatterns": ["/^@types\\///"]
+           },
+           {
+             "automerge": false,
+             "matchDepTypes": ["dependencies"],
+             "matchUpdateTypes": ["major"],
+             "prPriority": 5
+           },
+           {
+             "automerge": true,
+             "matchDepTypes": ["devDependencies"],
+             "matchUpdateTypes": ["patch"],
+             "prPriority": -1
+           }
+         ]
+       },
+       "newConfig": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:recommended"],
+         "packageRules": [
+           {
+             "automerge": false,
+             "groupName": "all @types",
+             "matchPackageNames": ["//^@types\\////"]
+           },
+           {
+             "automerge": false,
+             "matchDepTypes": ["dependencies"],
+             "matchUpdateTypes": ["major"],
+             "prPriority": 5
+           },
+           {
+             "automerge": true,
+             "matchDepTypes": ["devDependencies"],
+             "matchUpdateTypes": ["patch"],
+             "prPriority": -1
+           }
+         ]
+       }
+DEBUG: Post-massage config (repository=local)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:recommended"],
+         "packageRules": [
+           {
+             "automerge": false,
+             "groupName": "all @types",
+             "matchPackageNames": ["//^@types\\////"]
+           },
+           {
+             "automerge": false,
+             "matchDepTypes": ["dependencies"],
+             "matchUpdateTypes": ["major"],
+             "prPriority": 5
+           },
+           {
+             "automerge": true,
+             "matchDepTypes": ["devDependencies"],
+             "matchUpdateTypes": ["patch"],
+             "prPriority": -1
+           }
+         ]
+       }
+DEBUG: Resolved shallow config, without merging internal presets (repository=local)
+       "renovateVersion": "43.227.1",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "packageRules": [
+           {
+             "automerge": false,
+             "groupName": "all @types",
+             "matchPackageNames": ["//^@types\\////"]
+           },
+           {
+             "automerge": false,
+             "matchDepTypes": ["dependencies"],
+             "matchUpdateTypes": ["major"],
+             "prPriority": 5
+           },
+           {
+             "automerge": true,
+             "matchDepTypes": ["devDependencies"],
+             "matchUpdateTypes": ["patch"],
+             "prPriority": -1
+           }
+         ]
+       },
+       "visitedPresets": {"merged": [], "unmerged": ["config:recommended"]}
+DEBUG: Found repo ignorePaths (repository=local)
+       "ignorePaths": [
+         "**/node_modules/**",
+         "**/bower_components/**",
+         "**/vendor/**",
+         "**/examples/**",
+         "**/__tests__/**",
+         "**/test/**",
+         "**/tests/**",
+         "**/__fixtures__/**"
+       ]
+DEBUG: No vulnerability alerts found (repository=local)
+DEBUG: No baseBranches (repository=local)
+DEBUG: extract() (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Using file pattern: **/build.xml for manager ant (repository=local)
+DEBUG: Using file pattern: /(^|/)tasks/[^/]+\.ya?ml$/ for manager ansible (repository=local)
+DEBUG: Using file pattern: /(^|/)(galaxy|requirements)(\.ansible)?\.ya?ml$/ for manager ansible-galaxy (repository=local)
+DEBUG: Using file pattern: /(^|/)\.tool-versions$/ for manager asdf (repository=local)
+DEBUG: Using file pattern: /(^|/).azuredevops/.+\.ya?ml$/ for manager azure-pipelines (repository=local)
+DEBUG: Using file pattern: /azure.*pipelines?.*\.ya?ml$/ for manager azure-pipelines (repository=local)
+DEBUG: Using file pattern: /(^|/)batect(-bundle)?\.ya?ml$/ for manager batect (repository=local)
+DEBUG: Using file pattern: /(^|/)batect$/ for manager batect-wrapper (repository=local)
+DEBUG: Using file pattern: /(^|/)WORKSPACE(|\.bazel|\.bzlmod)$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /\.WORKSPACE\.bazel$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /\.bzl$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)MODULE\.bazel$/ for manager bazel-module (repository=local)
+DEBUG: Using file pattern: /(^|/)\.bazelversion$/ for manager bazelisk (repository=local)
+DEBUG: Using file pattern: /\.bicep$/ for manager bicep (repository=local)
+DEBUG: Using file pattern: **/*-pipelines.yml for manager bitbucket-pipelines (repository=local)
+DEBUG: Using file pattern: /(^|/)bitrise\.ya?ml$/ for manager bitrise (repository=local)
+DEBUG: Using file pattern: /buildkite\.ya?ml/ for manager buildkite (repository=local)
+DEBUG: Using file pattern: /\.buildkite/.+\.ya?ml$/ for manager buildkite (repository=local)
+DEBUG: Using file pattern: /(^|/)project\.toml$/ for manager buildpacks (repository=local)
+DEBUG: Using file pattern: /(^|/)bun\.lockb?$/ for manager bun (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.json$/ for manager bun (repository=local)
+DEBUG: Using file pattern: /(^|/)\.bun-version$/ for manager bun-version (repository=local)
+DEBUG: Using file pattern: /(^|/)Gemfile$/ for manager bundler (repository=local)
+DEBUG: Using file pattern: /\.cake$/ for manager cake (repository=local)
+DEBUG: Using file pattern: /(^|/)Cargo\.toml$/ for manager cargo (repository=local)
+DEBUG: Using file pattern: /(^|/)\.circleci/.+\.ya?ml$/ for manager circleci (repository=local)
+DEBUG: Using file pattern: /(^|/)cloudbuild\.ya?ml/ for manager cloudbuild (repository=local)
+DEBUG: Using file pattern: /(^|/)Podfile$/ for manager cocoapods (repository=local)
+DEBUG: Using file pattern: /(^|/)([\w-]*)composer\.json$/ for manager composer (repository=local)
+DEBUG: Using file pattern: /(^|/)conanfile\.(txt|py)$/ for manager conan (repository=local)
+DEBUG: Using file pattern: /(^|/)\.copier-answers(\..+)?\.ya?ml/ for manager copier (repository=local)
+DEBUG: Using file pattern: /(^|/)cpanfile$/ for manager cpanfile (repository=local)
+DEBUG: Using file pattern: /^\.crow(?:/[^/]+)?\.ya?ml$/ for manager crow (repository=local)
+DEBUG: Using file pattern: /(^|/)deno\.lock$/ for manager deno (repository=local)
+DEBUG: Using file pattern: /(^|/)deno\.(json|jsonc)$/ for manager deno (repository=local)
+DEBUG: Using file pattern: /(^|/)(?:deps|bb)\.edn$/ for manager deps-edn (repository=local)
+DEBUG: Using file pattern: /(^|/)devbox\.json$/ for manager devbox (repository=local)
+DEBUG: Using file pattern: /^.devcontainer/devcontainer.json$/ for manager devcontainer (repository=local)
+DEBUG: Using file pattern: /^.devcontainer.json$/ for manager devcontainer (repository=local)
+DEBUG: Using file pattern: /(^|/)(?:docker-)?compose[^/]*\.ya?ml$/ for manager docker-compose (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)([Dd]ocker|[Cc]ontainer)file$/ for manager dockerfile (repository=local)
+DEBUG: Using file pattern: /(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/ for manager dockerfile (repository=local)
+DEBUG: Using file pattern: /(^|/)\.drone\.yml$/ for manager droneci (repository=local)
+DEBUG: Using file pattern: /(^|/)fleet\.ya?ml/ for manager fleet (repository=local)
+DEBUG: Using file pattern: /(?:^|/)gotk-components\.ya?ml$/ for manager flux (repository=local)
+DEBUG: Using file pattern: /(^|/)\.fvm/fvm_config\.json$/ for manager fvm (repository=local)
+DEBUG: Using file pattern: /(^|/)\.fvmrc$/ for manager fvm (repository=local)
+DEBUG: Using file pattern: /(^|/)\.gitmodules$/ for manager git-submodules (repository=local)
+DEBUG: Using file pattern: /(^|/)(workflow-templates|\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\.ya?ml$/ for manager github-actions (repository=local)
+DEBUG: Using file pattern: /(^|/)action\.ya?ml$/ for manager github-actions (repository=local)
+DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci (repository=local)
+DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci-include (repository=local)
+DEBUG: Using file pattern: /(^|/)gleam.toml$/ for manager gleam (repository=local)
+DEBUG: Using file pattern: /(^|/)go\.mod$/ for manager gomod (repository=local)
+DEBUG: Using file pattern: /\.gradle(\.kts)?$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle\.properties$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle/.+\.toml$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)buildSrc/.+\.kt$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /\.versions\.toml$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)versions.props$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)versions.lock$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle/wrapper/gradle-wrapper\.properties$/ for manager gradle-wrapper (repository=local)
+DEBUG: Using file pattern: /\.cabal$/ for manager haskell-cabal (repository=local)
+DEBUG: Using file pattern: /(^|/)requirements\.ya?ml$/ for manager helm-requirements (repository=local)
+DEBUG: Using file pattern: /(^|/)values\.ya?ml$/ for manager helm-values (repository=local)
+DEBUG: Using file pattern: /(^|/)helmfile\.ya?ml(?:\.gotmpl)?$/ for manager helmfile (repository=local)
+DEBUG: Using file pattern: /(^|/)helmfile\.d/.+\.ya?ml(?:\.gotmpl)?$/ for manager helmfile (repository=local)
+DEBUG: Using file pattern: /(^|/)Chart\.ya?ml$/ for manager helmv3 (repository=local)
+DEBUG: Using file pattern: /(^|/)bin/hermit$/ for manager hermit (repository=local)
+DEBUG: Using file pattern: /(^|/)manifest\.json$/ for manager homeassistant-manifest (repository=local)
+DEBUG: Using file pattern: /^Formula/\w*/?[^/]+[.]rb$/ for manager homebrew (repository=local)
+DEBUG: Using file pattern: /\.html?$/ for manager html (repository=local)
+DEBUG: Using file pattern: /(^|/)plugins\.(txt|ya?ml)$/ for manager jenkins (repository=local)
+DEBUG: Using file pattern: /(^|/)jsonnetfile\.json$/ for manager jsonnet-bundler (repository=local)
+DEBUG: Using file pattern: /^.+\.main\.kts$/ for manager kotlin-script (repository=local)
+DEBUG: Using file pattern: /(^|/)kustomization\.ya?ml$/ for manager kustomize (repository=local)
+DEBUG: Using file pattern: /(^|/)project\.clj$/ for manager leiningen (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)pom\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /(^|/)pom\.template\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /^(((\.mvn)|(\.m2))/)?settings\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /(^|/)\.mvn/extensions\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /(^|\/).mvn/wrapper/maven-wrapper.properties$/ for manager maven-wrapper (repository=local)
+DEBUG: Using file pattern: /(^|\/)mvnw(.cmd)?$/ for manager maven-wrapper (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.js$/ for manager meteor (repository=local)
+DEBUG: Using file pattern: /(^|/)Mintfile$/ for manager mint (repository=local)
+DEBUG: Using file pattern: **/{,.}mise{,.*}.toml for manager mise (repository=local)
+DEBUG: Using file pattern: **/{,.}mise/config{,.*}.toml for manager mise (repository=local)
+DEBUG: Using file pattern: **/.config/mise{,.*}.toml for manager mise (repository=local)
+DEBUG: Using file pattern: **/.config/mise/{mise,config}{,.*}.toml for manager mise (repository=local)
+DEBUG: Using file pattern: **/.config/mise/conf.d/*.toml for manager mise (repository=local)
+DEBUG: Using file pattern: **/.rtx{,.*}.toml for manager mise (repository=local)
+DEBUG: Using file pattern: /(^|/)mix\.exs$/ for manager mix (repository=local)
+DEBUG: Using file pattern: /(^|/)flake\.nix$/ for manager nix (repository=local)
+DEBUG: Using file pattern: /(^|/)\.node-version$/ for manager nodenv (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.json$/ for manager npm (repository=local)
+DEBUG: Using file pattern: /(^|/)pnpm-workspace\.yaml$/ for manager npm (repository=local)
+DEBUG: Using file pattern: /(^|/)\.yarnrc\.yml$/ for manager npm (repository=local)
+DEBUG: Using file pattern: /\.(?:cs|fs|vb)proj$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /\.(?:props|targets)$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)dotnet-tools\.json$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)global\.json$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)\.nvmrc$/ for manager nvm (repository=local)
+DEBUG: Using file pattern: /(^|/)src/main/features/.+\.json$/ for manager osgi (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pep621 (repository=local)
+DEBUG: Using file pattern: /(^|/)[\w-]*requirements([-._]\w+)?\.(txt|pip)$/ for manager pip_requirements (repository=local)
+DEBUG: Using file pattern: /(^|/)setup\.py$/ for manager pip_setup (repository=local)
+DEBUG: Using file pattern: /(^|/)Pipfile$/ for manager pipenv (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pixi (repository=local)
+DEBUG: Using file pattern: /(^|/)pixi\.toml$/ for manager pixi (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager poetry (repository=local)
+DEBUG: Using file pattern: /(^|/)\.pre-commit-config\.ya?ml$/ for manager pre-commit (repository=local)
+DEBUG: Using file pattern: **/.prototools for manager proto (repository=local)
+DEBUG: Using file pattern: /(^|/)pubspec\.ya?ml$/ for manager pub (repository=local)
+DEBUG: Using file pattern: /(^|/)Puppetfile$/ for manager puppet (repository=local)
+DEBUG: Using file pattern: /(^|/)\.python-version$/ for manager pyenv (repository=local)
+DEBUG: Using file pattern: /.+\.container$/ for manager quadlet (repository=local)
+DEBUG: Using file pattern: /.+\.image$/ for manager quadlet (repository=local)
+DEBUG: Using file pattern: /.+\.volume$/ for manager quadlet (repository=local)
+DEBUG: Using file pattern: renovate.json for manager renovate-config (repository=local)
+DEBUG: Using file pattern: renovate.jsonc for manager renovate-config (repository=local)
+DEBUG: Using file pattern: renovate.json5 for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .github/renovate.json for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .github/renovate.jsonc for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .github/renovate.json5 for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .gitlab/renovate.json for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .gitlab/renovate.jsonc for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .gitlab/renovate.json5 for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .renovaterc for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .renovaterc.json for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .renovaterc.jsonc for manager renovate-config (repository=local)
+DEBUG: Using file pattern: .renovaterc.json5 for manager renovate-config (repository=local)
+DEBUG: Using file pattern: /(^|/)\.ruby-version$/ for manager ruby-version (repository=local)
+DEBUG: Using file pattern: /(^|/)runtime.txt$/ for manager runtime-version (repository=local)
+DEBUG: Using file pattern: /(^|/)rust-toolchain(\.toml)?$/ for manager rust-toolchain (repository=local)
+DEBUG: Using file pattern: /\.sbt$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /project/[^/]*\.scala$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /project/build\.properties$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /(^|/)repositories$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /(^|/)\.scalafmt.conf$/ for manager scalafmt (repository=local)
+DEBUG: Using file pattern: /(^|/)setup\.cfg$/ for manager setup-cfg (repository=local)
+DEBUG: Using file pattern: /(^|/)Package\.swift/ for manager swift (repository=local)
+DEBUG: Using file pattern: **/*.tf for manager terraform (repository=local)
+DEBUG: Using file pattern: **/*.tofu for manager terraform (repository=local)
+DEBUG: Using file pattern: /(^|/)\.terraform-version$/ for manager terraform-version (repository=local)
+DEBUG: Using file pattern: /(^|/)terragrunt\.hcl$/ for manager terragrunt (repository=local)
+DEBUG: Using file pattern: /(^|/)\.terragrunt-version$/ for manager terragrunt-version (repository=local)
+DEBUG: Using file pattern: /\.tflint\.hcl$/ for manager tflint-plugin (repository=local)
+DEBUG: Using file pattern: /^\.travis\.ya?ml$/ for manager travis (repository=local)
+DEBUG: Using file pattern: /\.typ$/ for manager typst (repository=local)
+DEBUG: Using file pattern: **/ProjectSettings/ProjectVersion.txt for manager unity3d (repository=local)
+DEBUG: Using file pattern: /(^|/)\.vela\.ya?ml$/ for manager velaci (repository=local)
+DEBUG: Using file pattern: /(^|/)vendir\.yml$/ for manager vendir (repository=local)
+DEBUG: Using file pattern: /^\.woodpecker(?:/[^/]+)?\.ya?ml$/ for manager woodpecker (repository=local)
+DEBUG: Using file pattern: **/project.yml for manager xcodegen (repository=local)
+DEBUG: Using file pattern: **/{j,t}sconfig.json for manager regex (repository=local)
+DEBUG: Using file pattern: **/{j,t}sconfig.*.json for manager regex (repository=local)
+DEBUG: Using file pattern: **/{j,t}sconfig.json for manager regex (repository=local)
+DEBUG: Using file pattern: **/{j,t}sconfig.*.json for manager regex (repository=local)
+DEBUG: Matched 1 file(s) for manager bun: package.json (repository=local)
+DEBUG: No bun lockfiles found (repository=local)
+DEBUG: Matched 1 file(s) for manager github-actions: .github/workflows/ci.yml (repository=local)
+DEBUG: Matched 1 file(s) for manager maven: pom.xml (repository=local)
+DEBUG: Matched 1 file(s) for manager npm: package.json (repository=local)
+DEBUG: Matched 1 file(s) for manager renovate-config: renovate.json (repository=local)
+DEBUG: npm file package.json has name "renovate-demo-app" (repository=local)
+DEBUG: Detecting pnpm Workspaces (repository=local)
+DEBUG: Detecting workspaces (repository=local)
+DEBUG: Finding locked versions (repository=local)
+DEBUG: manager extract durations (ms) (repository=local)
+       "managers": {"bun": 2, "github-actions": 33, "maven": 12, "npm": 39, "renovate-config": 16}
+DEBUG: Found github-actions package files (repository=local)
+DEBUG: Found maven package files (repository=local)
+DEBUG: Found npm package files (repository=local)
+DEBUG: Found 3 package file(s) (repository=local)
+ INFO: Dependency extraction complete (repository=local)
+       "stats": {
+         "managers": {
+           "github-actions": {"fileCount": 1, "depCount": 4},
+           "maven": {"fileCount": 1, "depCount": 3},
+           "npm": {"fileCount": 1, "depCount": 8}
+         },
+         "total": {"fileCount": 3, "depCount": 15}
+       }
+DEBUG: hostRules: no authentication for registry.npmjs.org (repository=local)
+DEBUG: hostRules: authentication already set for api.github.com (repository=local)
+DEBUG: Using queue: host=api.github.com, concurrency=16 (repository=local)
+DEBUG: Looking up com.google.guava:guava in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: Looking up org.apache.commons:commons-lang3 in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: Looking up org.springframework.boot:spring-boot-starter-parent in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: Using queue: host=registry.npmjs.org, concurrency=999 (repository=local)
+DEBUG: hostRules: no authentication for repo.maven.apache.org (repository=local)
+DEBUG: Using queue: host=repo.maven.apache.org, concurrency=16 (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/com/google/guava/guava/maven-metadata.xml (etag=W/"fdc683dad09652004694a0885cc75367", lastModified=Tue, 14 Apr 2026 19:31:16 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/maven-metadata.xml (etag=W/"cc1d9ee31ff9ed6e77a43ca652c19375", lastModified=Sun, 16 Nov 2025 12:55:35 GMT) (repository=local)
+DEBUG: Found 154 new releases for com.google.guava:guava in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: Found 26 new releases for org.apache.commons:commons-lang3 in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/lodash (etag=W/"bc55ccbfb68492361fbf2a48e22c838f", lastModified=Wed, 17 Jun 2026 01:28:35 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/winston (etag=W/"15e971999e8f620d00a12833cb08f6e7", lastModified=Fri, 24 Apr 2026 23:30:21 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@types%2Fexpress (etag=W/"966a4bad22e7a373a25fa218e7446bfb", lastModified=Mon, 01 Dec 2025 20:35:59 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/axios (etag=W/"a7a6a6141d575ece31f704d53da98b5b", lastModified=Sun, 14 Jun 2026 18:07:38 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/express (etag=W/"cf4f36b6c75e3a5028480c3548d21acb", lastModified=Tue, 19 May 2026 12:28:55 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom (etag=W/"939bd6b97e08be5545b51e1dc2831979", lastModified=Wed, 12 Nov 2025 20:08:07 GMT) (repository=local)
+DEBUG: Setting respectLatest=false for maven org.apache.commons:commons-lang3 (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.pom (etag=W/"131db0e2aa04d4bb16785b59266f1b1e", lastModified=Tue, 14 Apr 2026 18:13:38 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/eslint (etag=W/"10a215f8bf118bb9cbdd135052ec811a", lastModified=Fri, 12 Jun 2026 17:54:42 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.pom (etag=W/"93fa4ac769eb32c3311cbe38f6fa9660", lastModified=Sun, 12 Jul 2020 13:32:02 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/33.6.0-jre/guava-parent-33.6.0-jre.pom (etag=W/"db93b00fd5c2220312f8534ea07476c1", lastModified=Tue, 14 Apr 2026 18:13:38 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/jest (etag=W/"a4677dae03511c1c1caacfb9fd913bb5", lastModified=Sat, 09 May 2026 00:31:22 GMT) (repository=local)
+DEBUG: Setting respectLatest=false for maven com.google.guava:guava (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@types%2Fnode (etag=W/"34c4b5403efbe49d75576256faad66c9", lastModified=Wed, 10 Jun 2026 22:15:42 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/maven-metadata.xml (etag=W/"9fc412bc014879f5e81868ebd79efa47", lastModified=Wed, 10 Jun 2026 19:28:10 GMT) (repository=local)
+DEBUG: Found 289 new releases for org.springframework.boot:spring-boot-starter-parent in repository https://repo.maven.apache.org/maven2/ (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/com/google/guava/guava/30.0-jre/guava-30.0-jre.pom (etag=W/"95116383d62e3c05acdc8dfc91e1fb7d", lastModified=Fri, 16 Oct 2020 20:41:02 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/4.1.0/spring-boot-starter-parent-4.1.0.pom (etag=W/"46ddec65a39722e10dd065b610a0d8ad", lastModified=Wed, 10 Jun 2026 17:58:54 GMT) (repository=local)
+DEBUG: Setting respectLatest=false for maven org.springframework.boot:spring-boot-starter-parent (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.pom (etag=W/"6c30777cd0fc207a8b001d299c6a6e65", lastModified=Fri, 19 Mar 2021 15:41:28 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.5.0/spring-boot-starter-parent-2.5.0.pom (etag=W/"1578a02d9c800a5e709c16d2220e3607", lastModified=Thu, 20 May 2021 23:55:07 GMT) (repository=local)
+DEBUG: http cache: saving https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.7.18/spring-boot-starter-parent-2.7.18.pom (etag=W/"41275a6378a289ab5f99e56a158696a6", lastModified=Thu, 23 Nov 2023 08:05:28 GMT) (repository=local)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=local)
+DEBUG: Package releases lookups complete (repository=local)
+DEBUG: Repository libYears (repository=local)
+       "libYears": {
+         "managers": {
+           "github-actions": 1.714917966768138,
+           "maven": 15.887466641298833,
+           "npm": 42.79150414871893
+         },
+         "total": 60.3938887567859
+       },
+       "dependencyStatus": {"outdated": 14, "total": 15}
+DEBUG: branchifyUpgrades (repository=local)
+DEBUG: detectSemanticCommits() (repository=local)
+DEBUG: getCommitMessages (repository=local)
+DEBUG: semanticCommits: score=0 (repository=local)
+DEBUG: semanticCommits: disabled (repository=local)
+DEBUG: 22 flattened updates found: actions/checkout, actions/setup-node, node, org.springframework.boot:spring-boot-starter-parent, org.springframework.boot:spring-boot-starter-parent, com.google.guava:guava, com.google.guava:guava, org.apache.commons:commons-lang3, axios, axios, express, express, lodash, winston, @types/express, @types/express, @types/node, @types/node, eslint, eslint, jest, jest (repository=local)
+DEBUG: Returning 19 branch(es) (repository=local)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/actions-checkout-6.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/actions-setup-node-6.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/node-24.x)
+DEBUG: Found @types - reversing upgrades to use depName in PR (repository=local, branch=renovate/node-24.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/spring-boot)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/major-spring-boot)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/guava-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/major-guava-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/org.apache.commons-commons-lang3-3.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/axios-0.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/axios-1.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/express-4.x)
+DEBUG: Found @types - reversing upgrades to use depName in PR (repository=local, branch=renovate/express-4.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/express-5.x)
+DEBUG: Found @types - reversing upgrades to use depName in PR (repository=local, branch=renovate/express-5.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/lodash-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/winston-3.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/node-16.x)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/eslint-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/major-eslint-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/jest-monorepo)
+DEBUG: Branch is not pending, removing pending upgrades (repository=local, branch=renovate/major-jest-monorepo)
+DEBUG: config.repoIsOnboarded=true (repository=local)
+DEBUG: packageFiles with updates (repository=local)
+       "config": {
+         "github-actions": [
+           {
+             "deps": [
+               {
+                 "depName": "actions/checkout",
+                 "commitMessageTopic": "{{{depName}}} action",
+                 "versioning": "github-actions",
+                 "depType": "action",
+                 "replaceString": "actions/checkout@v4",
+                 "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+                 "currentValue": "v4",
+                 "datasource": "github-tags",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "v6.0.3",
+                     "newValue": "v6",
+                     "releaseTimestamp": "2026-06-02T14:35:13.000Z",
+                     "newVersionAgeInDays": 14,
+                     "newMajor": 6,
+                     "newMinor": 0,
+                     "newPatch": 3,
+                     "updateType": "major",
+                     "isBreaking": false,
+                     "libYears": 0.5395517820903095,
+                     "branchName": "renovate/actions-checkout-6.x"
+                   }
+                 ],
+                 "packageName": "actions/checkout",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/actions/checkout",
+                 "registryUrl": "https://github.com",
+                 "mostRecentTimestamp": "2026-06-02T14:35:13.000Z",
+                 "currentVersion": "v4.3.1",
+                 "currentVersionTimestamp": "2025-11-17T16:06:48.000Z",
+                 "currentVersionAgeInDays": 211,
+                 "isSingleVersion": false
+               },
+               {
+                 "depName": "actions/setup-node",
+                 "commitMessageTopic": "{{{depName}}} action",
+                 "versioning": "github-actions",
+                 "depType": "action",
+                 "replaceString": "actions/setup-node@v4",
+                 "autoReplaceStringTemplate": "{{depName}}@{{#if newDigest}}{{newDigest}}{{#if newValue}} # {{newValue}}{{/if}}{{/if}}{{#unless newDigest}}{{newValue}}{{/unless}}",
+                 "currentValue": "v4",
+                 "datasource": "github-tags",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "v6.4.0",
+                     "newValue": "v6",
+                     "releaseTimestamp": "2026-04-20T02:57:28.000Z",
+                     "newVersionAgeInDays": 58,
+                     "newMajor": 6,
+                     "newMinor": 4,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": false,
+                     "libYears": 1.0164428589548453,
+                     "branchName": "renovate/actions-setup-node-6.x"
+                   }
+                 ],
+                 "packageName": "actions/setup-node",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/actions/setup-node",
+                 "registryUrl": "https://github.com",
+                 "mostRecentTimestamp": "2026-04-20T02:57:28.000Z",
+                 "currentVersion": "v4.4.0",
+                 "currentVersionTimestamp": "2025-04-14T02:55:06.000Z",
+                 "currentVersionAgeInDays": 429,
+                 "isSingleVersion": false
+               },
+               {
+                 "depName": "ubuntu",
+                 "currentValue": "latest",
+                 "replaceString": "ubuntu-latest",
+                 "depType": "github-runner",
+                 "datasource": "github-runners",
+                 "autoReplaceStringTemplate": "{{depName}}-{{newValue}}",
+                 "skipReason": "invalid-version",
+                 "updates": [],
+                 "packageName": "ubuntu"
+               },
+               {
+                 "datasource": "github-releases",
+                 "depName": "node",
+                 "packageName": "actions/node-versions",
+                 "versioning": "node",
+                 "extractVersion": "^(?<version>\\d+\\.\\d+\\.\\d+)(-\\d+)?$",
+                 "currentValue": "20",
+                 "depType": "uses-with",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "24.16.0",
+                     "newValue": "24",
+                     "releaseTimestamp": "2026-05-22T02:36:24.000Z",
+                     "newVersionAgeInDays": 26,
+                     "newMajor": 24,
+                     "newMinor": 16,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "isRange": true,
+                     "libYears": 0.15892332572298326,
+                     "branchName": "renovate/node-24.x"
+                   }
+                 ],
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/actions/node-versions",
+                 "registryUrl": "https://github.com",
+                 "mostRecentTimestamp": "2026-06-01T19:22:20.000Z",
+                 "currentVersion": "20.20.2",
+                 "currentVersionTimestamp": "2026-03-25T02:26:18.000Z",
+                 "currentVersionAgeInDays": 84,
+                 "isSingleVersion": false
+               }
+             ],
+             "packageFile": ".github/workflows/ci.yml"
+           }
+         ],
+         "maven": [
+           {
+             "datasource": "maven",
+             "packageFile": "pom.xml",
+             "deps": [
+               {
+                 "datasource": "maven",
+                 "depName": "org.springframework.boot:spring-boot-starter-parent",
+                 "currentValue": "2.5.0",
+                 "fileReplacePosition": 507,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "parent",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "2.7.18",
+                     "newValue": "2.7.18",
+                     "releaseTimestamp": "2023-11-23T08:05:28.000Z",
+                     "newVersionAgeInDays": 937,
+                     "newMajor": 2,
+                     "newMinor": 7,
+                     "newPatch": 18,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 2.5091271061020035,
+                     "branchName": "renovate/spring-boot"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "4.1.0",
+                     "newValue": "4.1.0",
+                     "releaseTimestamp": "2026-06-10T17:58:54.000Z",
+                     "newVersionAgeInDays": 6,
+                     "newMajor": 4,
+                     "newMinor": 1,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 5.056856513191273,
+                     "branchName": "renovate/major-spring-boot"
+                   }
+                 ],
+                 "packageName": "org.springframework.boot:spring-boot-starter-parent",
+                 "versioning": "maven",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/spring-projects/spring-boot",
+                 "registryUrl": "https://repo.maven.apache.org/maven2",
+                 "homepage": "https://spring.io/projects/spring-boot",
+                 "respectLatest": false,
+                 "currentVersion": "2.5.0",
+                 "currentVersionTimestamp": "2021-05-20T23:55:07.000Z",
+                 "currentVersionAgeInDays": 1853,
+                 "isSingleVersion": true,
+                 "fixedVersion": "2.5.0"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "com.google.guava:guava",
+                 "currentValue": "30.0-jre",
+                 "fileReplacePosition": 1237,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "compile",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "30.1.1-jre",
+                     "newValue": "30.1.1-jre",
+                     "releaseTimestamp": "2021-03-19T15:41:28.000Z",
+                     "newVersionAgeInDays": 1915,
+                     "newMajor": 30,
+                     "newMinor": 1,
+                     "newPatch": 1,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 0.4213478564180619,
+                     "branchName": "renovate/guava-monorepo"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "33.6.0-jre",
+                     "newValue": "33.6.0-jre",
+                     "releaseTimestamp": "2026-04-14T18:13:38.000Z",
+                     "newVersionAgeInDays": 63,
+                     "newMajor": 33,
+                     "newMinor": 6,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 5.492870243531202,
+                     "branchName": "renovate/major-guava-monorepo"
+                   }
+                 ],
+                 "packageName": "com.google.guava:guava",
+                 "versioning": "maven",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/google/guava",
+                 "registryUrl": "https://repo.maven.apache.org/maven2",
+                 "respectLatest": false,
+                 "currentVersion": "30.0-jre",
+                 "currentVersionTimestamp": "2020-10-16T20:41:02.000Z",
+                 "currentVersionAgeInDays": 2069,
+                 "isSingleVersion": true,
+                 "fixedVersion": "30.0-jre"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.commons:commons-lang3",
+                 "currentValue": "3.11",
+                 "fileReplacePosition": 1487,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "compile",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "3.20.0",
+                     "newValue": "3.20.0",
+                     "releaseTimestamp": "2025-11-12T20:08:07.000Z",
+                     "newVersionAgeInDays": 216,
+                     "newMajor": 3,
+                     "newMinor": 20,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 5.337739884576357,
+                     "branchName": "renovate/org.apache.commons-commons-lang3-3.x"
+                   }
+                 ],
+                 "packageName": "org.apache.commons:commons-lang3",
+                 "versioning": "maven",
+                 "warnings": [],
+                 "sourceUrl": "https://gitbox.apache.org/repos/asf/commons-lang.git",
+                 "registryUrl": "https://repo.maven.apache.org/maven2",
+                 "homepage": "https://commons.apache.org/proper/commons-lang/",
+                 "respectLatest": false,
+                 "currentVersion": "3.11",
+                 "currentVersionTimestamp": "2020-07-12T13:32:02.000Z",
+                 "currentVersionAgeInDays": 2165,
+                 "isSingleVersion": true,
+                 "fixedVersion": "3.11"
+               }
+             ],
+             "packageFileVersion": "1.0.0-SNAPSHOT"
+           }
+         ],
+         "npm": [
+           {
+             "deps": [
+               {
+                 "depType": "dependencies",
+                 "depName": "axios",
+                 "currentValue": "0.21.1",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "0.33.0",
+                     "newValue": "0.33.0",
+                     "hasAttestation": true,
+                     "releaseTimestamp": "2026-06-14T18:07:21.271Z",
+                     "newVersionAgeInDays": 2,
+                     "newMajor": 0,
+                     "newMinor": 33,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "isBreaking": true,
+                     "libYears": 5.478286249682902,
+                     "branchName": "renovate/axios-0.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "1.18.0",
+                     "newValue": "1.18.0",
+                     "hasAttestation": true,
+                     "releaseTimestamp": "2026-06-14T18:07:37.143Z",
+                     "newVersionAgeInDays": 2,
+                     "newMajor": 1,
+                     "newMinor": 18,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 5.47828675298072,
+                     "branchName": "renovate/axios-1.x"
+                   }
+                 ],
+                 "packageName": "axios",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/axios/axios",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://axios-http.com",
+                 "mostRecentTimestamp": "2026-06-14T18:07:37.143Z",
+                 "currentVersion": "0.21.1",
+                 "currentVersionTimestamp": "2020-12-22T04:20:06.101Z",
+                 "currentVersionAgeInDays": 2003,
+                 "isSingleVersion": true,
+                 "fixedVersion": "0.21.1"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "express",
+                 "currentValue": "4.17.1",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.22.2",
+                     "newValue": "4.22.2",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2026-05-11T18:50:00.007Z",
+                     "newVersionAgeInDays": 36,
+                     "newMajor": 4,
+                     "newMinor": 22,
+                     "newPatch": 2,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 6.960548750665906,
+                     "branchName": "renovate/express-4.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "5.2.1",
+                     "newValue": "5.2.1",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2025-12-01T20:49:43.268Z",
+                     "newVersionAgeInDays": 197,
+                     "newMajor": 5,
+                     "newMinor": 2,
+                     "newPatch": 1,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 6.519680639967022,
+                     "branchName": "renovate/express-5.x"
+                   }
+                 ],
+                 "packageName": "express",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/expressjs/express",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://expressjs.com/",
+                 "currentVersion": "4.17.1",
+                 "currentVersionTimestamp": "2019-05-26T04:25:34.606Z",
+                 "currentVersionAgeInDays": 2579,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.17.1"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "lodash",
+                 "currentValue": "4.17.15",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.18.1",
+                     "newValue": "4.18.1",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2026-04-01T21:01:20.458Z",
+                     "newVersionAgeInDays": 76,
+                     "newMajor": 4,
+                     "newMinor": 18,
+                     "newPatch": 1,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 6.703486614472349,
+                     "branchName": "renovate/lodash-monorepo"
+                   }
+                 ],
+                 "packageName": "lodash",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/lodash/lodash",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://lodash.com/",
+                 "mostRecentTimestamp": "2026-04-01T21:01:20.458Z",
+                 "currentVersion": "4.17.15",
+                 "currentVersionTimestamp": "2019-07-19T02:28:46.584Z",
+                 "currentVersionAgeInDays": 2525,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.17.15"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "winston",
+                 "currentValue": "2.4.7",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "3.19.0",
+                     "newValue": "3.19.0",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2025-12-07T07:37:16.009Z",
+                     "newVersionAgeInDays": 192,
+                     "newMajor": 3,
+                     "newMinor": 19,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 3.059230455225774,
+                     "branchName": "renovate/winston-3.x"
+                   }
+                 ],
+                 "packageName": "winston",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/winstonjs/winston",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "mostRecentTimestamp": "2025-12-07T07:37:16.009Z",
+                 "currentVersion": "2.4.7",
+                 "currentVersionTimestamp": "2022-11-15T16:45:44.373Z",
+                 "currentVersionAgeInDays": 1309,
+                 "isSingleVersion": true,
+                 "fixedVersion": "2.4.7"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "@types/express",
+                 "currentValue": "4.17.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.17.25",
+                     "newValue": "4.17.25",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2025-10-27T20:36:07.728Z",
+                     "newVersionAgeInDays": 232,
+                     "newMajor": 4,
+                     "newMinor": 17,
+                     "newPatch": 25,
+                     "updateType": "patch",
+                     "isBreaking": false,
+                     "libYears": 6.397241223966261,
+                     "branchName": "renovate/express-4.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "5.0.6",
+                     "newValue": "5.0.6",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2025-12-01T20:35:51.488Z",
+                     "newVersionAgeInDays": 197,
+                     "newMajor": 5,
+                     "newMinor": 0,
+                     "newPatch": 6,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 6.493131119958143,
+                     "branchName": "renovate/express-5.x"
+                   }
+                 ],
+                 "packageName": "@types/express",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "types/express",
+                 "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express",
+                 "mostRecentTimestamp": "2025-12-01T20:35:51.488Z",
+                 "currentVersion": "4.17.0",
+                 "currentVersionTimestamp": "2019-06-04T20:46:08.489Z",
+                 "currentVersionAgeInDays": 2569,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.17.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "@types/node",
+                 "currentValue": "16.0.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "16.18.126",
+                     "newValue": "16.18.126",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2025-02-04T00:04:44.076Z",
+                     "newVersionAgeInDays": 498,
+                     "newMajor": 16,
+                     "newMinor": 18,
+                     "newPatch": 126,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 3.5917266585806695,
+                     "branchName": "renovate/node-16.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "24.13.2",
+                     "newValue": "24.13.2",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2026-06-10T22:15:29.361Z",
+                     "newVersionAgeInDays": 6,
+                     "newMajor": 24,
+                     "newMinor": 13,
+                     "newPatch": 2,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 4.939464015410959,
+                     "branchName": "renovate/node-24.x"
+                   }
+                 ],
+                 "packageName": "@types/node",
+                 "versioning": "node",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "types/node",
+                 "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
+                 "currentVersion": "16.0.0",
+                 "currentVersionTimestamp": "2021-07-03T00:33:12.171Z",
+                 "currentVersionAgeInDays": 1810,
+                 "isSingleVersion": true,
+                 "fixedVersion": "16.0.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "eslint",
+                 "currentValue": "7.31.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "7.32.0",
+                     "newValue": "7.32.0",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2021-07-30T22:46:46.636Z",
+                     "newVersionAgeInDays": 1782,
+                     "newMajor": 7,
+                     "newMinor": 32,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 0.03570631915905632,
+                     "branchName": "renovate/eslint-monorepo"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "10.5.0",
+                     "newValue": "10.5.0",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2026-06-12T17:54:40.577Z",
+                     "newVersionAgeInDays": 4,
+                     "newMajor": 10,
+                     "newMinor": 5,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 4.903643722158803,
+                     "branchName": "renovate/major-eslint-monorepo"
+                   }
+                 ],
+                 "packageName": "eslint",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/eslint/eslint",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://eslint.org",
+                 "mostRecentTimestamp": "2026-06-12T17:54:40.577Z",
+                 "currentVersion": "7.31.0",
+                 "currentVersionTimestamp": "2021-07-17T21:59:32.155Z",
+                 "currentVersionAgeInDays": 1795,
+                 "isSingleVersion": true,
+                 "fixedVersion": "7.31.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "jest",
+                 "currentValue": "27.5.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "27.5.1",
+                     "newValue": "27.5.1",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2022-02-08T10:52:53.070Z",
+                     "newVersionAgeInDays": 1589,
+                     "newMajor": 27,
+                     "newMinor": 5,
+                     "newPatch": 1,
+                     "updateType": "patch",
+                     "isBreaking": false,
+                     "libYears": 0.00831989802130898,
+                     "branchName": "renovate/jest-monorepo"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "30.4.2",
+                     "newValue": "30.4.2",
+                     "hasAttestation": false,
+                     "releaseTimestamp": "2026-05-09T00:31:21.036Z",
+                     "newVersionAgeInDays": 39,
+                     "newMajor": 30,
+                     "newMinor": 4,
+                     "newPatch": 2,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 4.253712717846271,
+                     "branchName": "renovate/major-jest-monorepo"
+                   }
+                 ],
+                 "packageName": "jest",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/jestjs/jest",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "packages/jest",
+                 "homepage": "https://jestjs.io/",
+                 "mostRecentTimestamp": "2026-05-09T00:31:21.036Z",
+                 "currentVersion": "27.5.0",
+                 "currentVersionTimestamp": "2022-02-05T09:59:56.766Z",
+                 "currentVersionAgeInDays": 1593,
+                 "isSingleVersion": true,
+                 "fixedVersion": "27.5.0"
+               }
+             ],
+             "extractedConstraints": {},
+             "packageFileVersion": "1.0.0",
+             "managerData": {
+               "packageJsonName": "renovate-demo-app",
+               "hasPackageManager": false,
+               "yarnZeroInstall": false,
+               "npmrcFileName": null
+             },
+             "skipInstalls": true,
+             "packageFile": "package.json"
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=local)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=local)
+DEBUG: Repository timing splits (milliseconds) (repository=local)
+       "splits": {"init": 762, "onboarding": 0, "extract": 381, "lookup": 4350, "update": 0},
+       "total": 5494
+DEBUG: Package cache statistics (repository=local)
+       "get": {"count": 44, "avgMs": 9, "medianMs": 3, "maxMs": 30, "totalMs": 380},
+       "set": {"count": 33, "avgMs": 34, "medianMs": 18, "maxMs": 203, "totalMs": 1129}
+DEBUG: Datasource cache statistics (repository=local)
+       "maven": {
+         "https://repo.maven.apache.org/maven2": {
+           "hit": 0,
+           "miss": 3,
+           "set": 3,
+           "skip": 0
+         }
+       },
+       "npm": {"https://registry.npmjs.org": {"hit": 0, "miss": 0, "set": 0, "skip": 8}},
+       "github-tags": {"https://github.com": {"hit": 0, "miss": 0, "set": 0, "skip": 2}},
+       "github-releases": {"https://github.com": {"hit": 0, "miss": 0, "set": 0, "skip": 1}}
+DEBUG: HTTP statistics (repository=local)
+       "hosts": {
+         "api.github.com": {
+           "count": 10,
+           "reqAvgMs": 644,
+           "reqMedianMs": 620,
+           "reqMaxMs": 912,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 2
+         },
+         "registry.npmjs.org": {
+           "count": 8,
+           "reqAvgMs": 440,
+           "reqMedianMs": 348,
+           "reqMaxMs": 869,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         },
+         "repo.maven.apache.org": {
+           "count": 12,
+           "reqAvgMs": 353,
+           "reqMedianMs": 304,
+           "reqMaxMs": 1287,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         }
+       },
+       "requests": 30
+DEBUG: HTTP cache statistics (repository=local)
+       "https://registry.npmjs.org": {
+         "/@types%2Fexpress": {"hit": 0, "miss": 1},
+         "/@types%2Fnode": {"hit": 0, "miss": 1},
+         "/axios": {"hit": 0, "miss": 1},
+         "/eslint": {"hit": 0, "miss": 1},
+         "/express": {"hit": 0, "miss": 1},
+         "/jest": {"hit": 0, "miss": 1},
+         "/lodash": {"hit": 0, "miss": 1},
+         "/winston": {"hit": 0, "miss": 1}
+       },
+       "https://repo.maven.apache.org": {
+         "/maven2/com/google/guava/guava-parent/33.6.0-jre/guava-parent-33.6.0-jre.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/com/google/guava/guava/30.0-jre/guava-30.0-jre.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.pom": {
+           "hit": 0,
+           "miss": 1,
+           "localHit": 1
+         },
+         "/maven2/com/google/guava/guava/maven-metadata.xml": {"hit": 0, "miss": 1},
+         "/maven2/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.pom": {
+           "hit": 0,
+           "miss": 1,
+           "localHit": 1
+         },
+         "/maven2/org/apache/commons/commons-lang3/maven-metadata.xml": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/org/springframework/boot/spring-boot-starter-parent/2.5.0/spring-boot-starter-parent-2.5.0.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/org/springframework/boot/spring-boot-starter-parent/2.7.18/spring-boot-starter-parent-2.7.18.pom": {
+           "hit": 0,
+           "miss": 1
+         },
+         "/maven2/org/springframework/boot/spring-boot-starter-parent/4.1.0/spring-boot-starter-parent-4.1.0.pom": {
+           "hit": 0,
+           "miss": 1,
+           "localHit": 1
+         },
+         "/maven2/org/springframework/boot/spring-boot-starter-parent/maven-metadata.xml": {
+           "hit": 0,
+           "miss": 1
+         }
+       }
+DEBUG: Lookup statistics (repository=local)
+       "npm": {"count": 8, "avgMs": 614, "medianMs": 564, "maxMs": 1172, "totalMs": 4911},
+       "maven": {"count": 3, "avgMs": 1706, "medianMs": 1830, "maxMs": 2152, "totalMs": 5119},
+       "github-tags": {"count": 2, "avgMs": 1622, "medianMs": 1635, "maxMs": 1635, "totalMs": 3243},
+       "github-releases": {"count": 1, "avgMs": 3797, "medianMs": 3797, "maxMs": 3797, "totalMs": 3797}
+DEBUG: getReleases statistics summary (repository=local)
+       "stats": {
+         "count": 14,
+         "avgMs": 1067,
+         "medianMs": 711.084689,
+         "maxMs": 3774.8130929999998,
+         "totalMs": 14933.757711000002
+       },
+       "datasources": {
+         "npm": {
+           "stats": {
+             "count": 8,
+             "avgMs": 572,
+             "medianMs": 538.575044,
+             "maxMs": 1089.266381,
+             "totalMs": 4577.683663
+           },
+           "registryUrls": {
+             "https://registry.npmjs.org": {
+               "stats": {
+                 "count": 8,
+                 "avgMs": 572,
+                 "medianMs": 538.575044,
+                 "maxMs": 1089.266381,
+                 "totalMs": 4577.683663
+               }
+             }
+           }
+         },
+         "maven": {
+           "stats": {
+             "count": 3,
+             "avgMs": 1125,
+             "medianMs": 1105.125879,
+             "maxMs": 1682.526038,
+             "totalMs": 3375.951793
+           },
+           "registryUrls": {
+             "https://repo.maven.apache.org/maven2": {
+               "stats": {
+                 "count": 3,
+                 "avgMs": 1125,
+                 "medianMs": 1105.125879,
+                 "maxMs": 1682.526038,
+                 "totalMs": 3375.951793
+               }
+             }
+           }
+         },
+         "github-tags": {
+           "stats": {
+             "count": 2,
+             "avgMs": 1603,
+             "medianMs": 1616.203203,
+             "maxMs": 1616.203203,
+             "totalMs": 3205.309162
+           },
+           "registryUrls": {
+             "https://github.com": {
+               "stats": {
+                 "count": 2,
+                 "avgMs": 1603,
+                 "medianMs": 1616.203203,
+                 "maxMs": 1616.203203,
+                 "totalMs": 3205.309162
+               }
+             }
+           }
+         },
+         "github-releases": {
+           "stats": {
+             "count": 1,
+             "avgMs": 3775,
+             "medianMs": 3774.8130929999998,
+             "maxMs": 3774.8130929999998,
+             "totalMs": 3774.8130929999998
+           },
+           "registryUrls": {
+             "https://github.com": {
+               "stats": {
+                 "count": 1,
+                 "avgMs": 3775,
+                 "medianMs": 3774.8130929999998,
+                 "maxMs": 3774.8130929999998,
+                 "totalMs": 3774.8130929999998
+               }
+             }
+           }
+         }
+       }
+DEBUG: Cache fallback URLs (repository=local)
+       "count": 0,
+       "hits": {}
+DEBUG: Git operations statistics (repository=local)
+ INFO: Repository finished (repository=local)
+       "cloned": undefined,
+       "durationMs": 5494,
+       "result": undefined,
+       "status": undefined,
+       "enabled": undefined,
+       "onboarded": undefined
+DEBUG: Checking file package cache for expired items
+DEBUG: Deleted 0 of 33 file cached entries in 23ms
