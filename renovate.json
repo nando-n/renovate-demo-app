@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>nando.n/renovate-config"
+    "github>nando-n/renovate-config"
   ]
 }
