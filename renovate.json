@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
   "customManagers": [
     {
       "customType": "regex",
@@ -13,16 +14,19 @@
   "extends": [
     "config:recommended"
   ],
+  "kubernetes": {
+    "fileMatch": ["\\.ya?ml$"]
+  },
   "prConcurrentLimit": 100,
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "automerge": false,
+      "automerge": true,
       "groupName": "all @types",
       "matchPackagePatterns": ["^@types/"]
     },
     {
-      "automerge": false,
+      "automerge": true,
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["major"],
       "prPriority": 5
