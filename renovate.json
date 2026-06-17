@@ -1,28 +1,39 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
   "customManagers": [
     {
       "customType": "regex",
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "nodejs/node",
-      "fileMatch": "^tool-versions\\.txt$",
+      "managerFilePatterns": [
+        "/^tool-versions\\.txt$/"
+      ],
       "matchStrings": ["node=(?<currentValue>[\\d.]+)"],
       "versioningTemplate": "node"
     }
   ],
+  "enabledManagers": ["kubernetes"],
   "extends": [
     "config:recommended"
   ],
+  "kubernetes": {
+    "managerFilePatterns": [
+      "/\\.ya?ml$/"
+    ]
+  },
   "prConcurrentLimit": 100,
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "automerge": false,
+      "automerge": true,
       "groupName": "all @types",
-      "matchPackagePatterns": ["^@types/"]
+      "matchPackageNames": [
+        "/^@types//"
+      ]
     },
     {
-      "automerge": false,
+      "automerge": true,
       "matchDepTypes": ["dependencies"],
       "matchUpdateTypes": ["major"],
       "prPriority": 5
